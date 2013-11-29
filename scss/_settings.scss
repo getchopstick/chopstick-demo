@@ -20,13 +20,13 @@ $grid-gutter	: 20;
 $grid-column	: 60;
 $grid-columns	: 12;
 
-// Breakpoints calculated in em's, always based on 16px base-value
+// Breakpoints calculated in em's, always based on $alpha-font-size
 
-$bp1: 320/16*1em;
-$bp2: 480/16*1em;
-$bp3: 680/16*1em;
-$bp4: 960/16*1em;
-$bp5: 1140/16*1em;
+$bp1: (320/$alpha-font-size)*1em;
+$bp2: (480/$alpha-font-size)*1em;
+$bp3: (680/$alpha-font-size)*1em;
+$bp4: (960/$alpha-font-size)*1em;
+$bp5: (1140/$alpha-font-size)*1em;
 
 // the last breakpoint is calculated in shared/_grid.scss
 // $bp5: #{1200 / $alpha-font-size}em;
