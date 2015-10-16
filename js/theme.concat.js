@@ -127,7 +127,6 @@ chopstick.toggle =
             var trigger = $(this);
             var target = trigger.data(module.settings.targetDataAtr);
             var toggleClass = trigger.data(module.settings.classDataAtr);
-            console.log(toggleClass);
             // Check if action needs to be prevented
             if (trigger.data("action") == "none") {
                 e.preventDefault();
