@@ -1,4 +1,3 @@
-var toggleSettings
 chopstick.toggle =
 {
     settings:
@@ -8,8 +7,6 @@ chopstick.toggle =
 
     init: function()
     {
-        // Initialize toggle settings
-        toggleSettings = chopstick.toggle.settings;
         // Bind toggle events
         chopstick.toggle.bindUIEvents();
     },
@@ -17,7 +14,7 @@ chopstick.toggle =
     bindUIEvents: function()
     {
         // Bind show hide event
-        toggleSettings.showHideToggle.on('touchstart click', function(e){
+        this.settings.showHideToggle.on('touchstart click', function(e){
             var trigger = $(this);
             // Check if action needs to be prevented
             if (trigger.data("action") == "none") {
