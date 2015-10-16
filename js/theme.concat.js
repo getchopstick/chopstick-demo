@@ -99,7 +99,10 @@ chopstick.toggle =
 {
     settings:
     {
-        showHideToggle: $('.js-show-hide')
+        showHideToggle: '.js-show-hide',
+        targetDataAtr: 'target-selector',
+        defaultTriggerClass: 'is-toggled',
+        defaultTargetClass: 'is-hidden'
     },
 
     init: function()
@@ -110,22 +113,25 @@ chopstick.toggle =
 
     bindUIEvents: function()
     {
+        // Classic that = this;
+        var module = this;
+
         // Bind show hide event
-        this.settings.showHideToggle.on('touchstart click', function(e){
+        $(this.settings.showHideToggle-.on('touchstart click', function(e){
             var trigger = $(this);
             // Check if action needs to be prevented
             if (trigger.data("action") == "none") {
                 e.preventDefault();
             }
-            chopstick.toggle.showHide(trigger.data("target-selector"));
-            trigger.toggleClass('is-toggled');
+            chopstick.toggle.showHide(trigger.data(module.settings.targetDataAtr));
+            trigger.toggleClass(module.settings.defaultTriggerClass);
         });
     },
 
     showHide: function(targets)
     {
         //  Toggle the 'is-hidden' class
-        $(targets).toggleClass('is-hidden');
+        $(targets).toggleClass(module.settings.defaultTargetClass);
     }
 };
 
