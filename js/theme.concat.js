@@ -108,7 +108,7 @@ chopstick.toggle =
     init: function()
     {
         // Bind toggle events
-        chopstick.toggle.bindUIEvents();
+        this.bindUIEvents();
     },
 
     bindUIEvents: function()
@@ -123,7 +123,7 @@ chopstick.toggle =
             if (trigger.data("action") == "none") {
                 e.preventDefault();
             }
-            chopstick.toggle.showHide(trigger.data(module.settings.targetDataAtr));
+            module.showHide(trigger.data(module.settings.targetDataAtr));
             trigger.toggleClass(module.settings.defaultTriggerClass);
         });
     },
