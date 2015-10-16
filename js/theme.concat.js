@@ -95,6 +95,11 @@ chopstick.mobileNav =
     }
 };
 
+// 
+// Example Usage
+//
+// <a href="#" class="js-show-hide" data-target-selector="h1" data-toggle-class="u-bcg-green">toggle .u-bcg-green</a>
+
 chopstick.toggle =
 {
     settings:
