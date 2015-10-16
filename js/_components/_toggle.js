@@ -34,6 +34,6 @@ chopstick.toggle =
     showHide: function(targets)
     {
         //  Toggle the 'is-hidden' class
-        $(targets).toggleClass(module.settings.defaultTargetClass);
+        $(targets).toggleClass(this.settings.defaultTargetClass);
     }
 };
