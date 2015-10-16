@@ -117,7 +117,7 @@ chopstick.toggle =
         var module = this;
 
         // Bind show hide event
-        $(this.settings.showHideToggle-.on('touchstart click', function(e){
+        $(this.settings.showHideToggle).on('touchstart click', function(e){
             var trigger = $(this);
             // Check if action needs to be prevented
             if (trigger.data("action") == "none") {
