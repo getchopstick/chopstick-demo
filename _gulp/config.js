@@ -3,10 +3,10 @@
 // Define your tasks & variables here
 // ---
 
-var path = './';
+var path = '';
 
 module.exports = {
-    
+
     scss: {
         src: path + 'scss/**/*.scss',
         settings: {
