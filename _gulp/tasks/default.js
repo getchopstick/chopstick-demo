@@ -8,6 +8,7 @@ var gulp = require('gulp');
 // task
 gulp.task('default', [
     'test',
+    'symbols',
     'scss',
     'js',
     'jekyll--build'

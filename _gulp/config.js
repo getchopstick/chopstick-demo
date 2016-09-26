@@ -6,7 +6,7 @@
 var path = './';
 
 module.exports = {
-
+    
     scss: {
         src: path + 'scss/**/*.scss',
         settings: {
@@ -67,6 +67,7 @@ module.exports = {
             path + 'img/**/*.png',
             path + 'img/**/*.jpg',
             path + 'img/**/*.svg',
+            path + '_includes/**/*.svg',
             path + '_posts/*.md',
             path + '_data/*.yml',
             path + '**/*.html',
@@ -80,13 +81,11 @@ module.exports = {
         dest: path + '_site/js/'
     },
 
-    svg2png: {
-        src: path + "img/svg/*.svg",
-        settings : {
-            scaling : 2, // The scaling factor (optional; default=1.0)
-            verbose: false // Logs progress information (optional; default=false)
-        },
-        dest: path + "img/png"
+    symbols: {
+        src: path + '_artwork/symbols/**/*.svg', // Location of source icons
+        dest: path + '_includes', // Destination of main SVG
+        prefix: 'c-symbol-', // SVG symbols ID prefix e.g. `c-symbol-right`
+        class: 'c-symbolset' // Main SVG import classname
     }
 
 };

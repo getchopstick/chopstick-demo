@@ -20,7 +20,7 @@ var processors = [
     autoprefixer(config.prefix)
 ];
 
-// // task
+// task
 gulp.task('scss', function () {
     gulp.src(config.src)
         .pipe(sourcemaps.init())
