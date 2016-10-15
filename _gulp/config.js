@@ -15,12 +15,10 @@ module.exports = {
         cssDest: path + 'css/',
         jekyllCssDes: path + '_site/css/',
         prefix: [                          // Autoprefixer supported browsers
-            'last 2 version',
-            '> 1%',
-            'ie 8',
-            'ie 9',
-            'ios 6',
-            'android 4'
+            'last 2 versions',
+            'ie 9-11',
+            'ios 8-10',
+            'android 4-5'
         ]
     },
 
@@ -72,13 +70,26 @@ module.exports = {
             path + '_data/*.yml',
             path + '**/*.html',
             path + '_config.yml',
-            '!' + path + '_site/**/*.*'
+            '!' + path + '_site/**/*'
         ]
     },
 
     compressjs: {
         src: path + 'js/*.js',
         dest: path + '_site/js/'
+    },
+    
+    svg2png: {
+        src: path + "img/svg/*.svg",
+        settings : {
+            scaling : 2, // The scaling factor (optional; default=1.0)
+            verbose: false // Logs progress information (optional; default=false)
+        },
+        dest: path + "img/png"
+    },
+
+    dependencies: {
+        dest: path + "vendor/"
     },
 
     symbols: {
