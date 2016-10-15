@@ -78,15 +78,6 @@ module.exports = {
         src: path + 'js/*.js',
         dest: path + '_site/js/'
     },
-    
-    svg2png: {
-        src: path + "img/svg/*.svg",
-        settings : {
-            scaling : 2, // The scaling factor (optional; default=1.0)
-            verbose: false // Logs progress information (optional; default=false)
-        },
-        dest: path + "img/png"
-    },
 
     dependencies: {
         dest: path + "vendor/"
