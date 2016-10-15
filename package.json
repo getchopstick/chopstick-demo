@@ -36,8 +36,7 @@
     "chopstick-settings": "^0.7.4",
     "chopstick-tools": "^0.7.4",
     "chopstick-utilities": "^0.7.5",
-    "jquery": "^3.1.0",
-    "modernizr": "^3.3.1",
-    "svgxuse": "^1.1.22"
+    "svgxuse": "^1.1.22",
+    "jquery": "^3.1.0"
   }
 }
