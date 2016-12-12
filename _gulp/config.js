@@ -29,6 +29,15 @@ module.exports = {
         }
     },
 
+    babel: {
+
+        src: 'js/theme.concat.js',
+        concatFilename: 'theme.concat.js',
+        jekyllJsDest: path + '_site/js/',
+        jsDest: path + 'js/'
+
+    },
+
     js: {
         src : [  // source js file
           path + 'js/theme.js',

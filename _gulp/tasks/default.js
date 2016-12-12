@@ -9,9 +9,10 @@ var gulp = require('gulp'),
 // task
 gulp.task('default', [
     'dependencies',
-    'test',
+    //'test',
     'symbols',
     'scss',
     'js',
+    'babel',
     'jekyll--build'
 ]);
