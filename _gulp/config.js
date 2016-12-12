@@ -31,7 +31,7 @@ module.exports = {
 
     babel: {
 
-        src: 'js/theme.concat.es6.js',
+        src: 'js/theme.concat.js',
         concatFilename: 'theme.concat.js',
         jekyllJsDest: path + '_site/js/',
         jsDest: path + 'js/'
@@ -45,7 +45,7 @@ module.exports = {
           path + 'js/loader.js'
 
         ],
-        concatFilename: 'theme.concat.es6.js', // result filename
+        concatFilename: 'theme.concat.js', // result filename
         jekyllJsDest: path + '_site/js/',
         jsDest: path + 'js/'
     },
