@@ -3,7 +3,7 @@
 // ---
 
 // plugins
-var gulp = require('gulp');
+var gulp = require('gulp'),
     scsslint = require('gulp-scss-lint');
 
 // configfile
