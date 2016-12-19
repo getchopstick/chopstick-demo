@@ -1,36 +1,49 @@
-var toggleSettings
+// 
+// Example Usage
+//
+// <a href="#" class="js-show-hide" data-target-selector="h1" data-toggle-class="u-bcg-green">toggle .u-bcg-green</a>
+
 chopstick.toggle =
 {
     settings:
     {
-        showHideToggle: $('.js-show-hide')
+        showHideToggle: '.js-show-hide',
+        targetDataAtr: 'target-selector',
+        classDataAtr: 'toggle-class',
+        defaultTriggerClass: 'is-toggled',
+        defaultTargetClass: 'is-hidden'
     },
 
     init: function()
     {
-        // Initialize toggle settings
-        toggleSettings = chopstick.toggle.settings;
         // Bind toggle events
-        chopstick.toggle.bindUIEvents();
+        this.bindUIEvents();
     },
 
     bindUIEvents: function()
     {
+        // Classic that = this;
+        var module = this;
+
         // Bind show hide event
-        toggleSettings.showHideToggle.on('touchstart click', function(e){
+        $(this.settings.showHideToggle).on('touchstart click', function(e){
             var trigger = $(this);
+            var target = trigger.data(module.settings.targetDataAtr);
+            var toggleClass = trigger.data(module.settings.classDataAtr);
             // Check if action needs to be prevented
             if (trigger.data("action") == "none") {
                 e.preventDefault();
             }
-            chopstick.toggle.showHide(trigger.data("target-selector"));
-            trigger.toggleClass('is-toggled');
+            
+            module.showHide(target, toggleClass);
+            trigger.toggleClass(module.settings.defaultTriggerClass);
         });
     },
 
-    showHide: function(targets)
+    showHide: function(targets, toggleClass)
     {
+        if (typeof toggleClass === 'undefined') { toggleClass = this.settings.defaultTargetClass; }
         //  Toggle the 'is-hidden' class
-        $(targets).toggleClass('is-hidden');
+        $(targets).toggleClass(toggleClass);
     }
 };
