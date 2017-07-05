@@ -12,6 +12,6 @@ gulp.task('default', [
     'test',
     'symbols',
     'scss',
-    'js',
+    'webpack',
     'jekyll--build'
 ]);
